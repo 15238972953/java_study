@@ -11,6 +11,35 @@ public class Two_color_ball_system_development {
         int[] userNumbers = userInputNumbers();
         printarray(userNumbers);
     }
+    public static void judge(int[] luckNumbers,int[] userNumbers){
+        int redHitNumbers=0;
+        int blueHitNumbers=0;
+        for (int i = 0; i < userNumbers.length-1; i++) {
+            for (int j = 0; j < luckNumbers.length-1; j++) {
+                if(userNumbers[i]==luckNumbers[j]){
+                    redHitNumbers++;
+                    break;
+                }
+            }
+        }
+        redHitNumbers = userNumbers[6]==luckNumbers[6]?1:0;
+
+        if (blueHitNumbers==1&&redHitNumbers<3){
+            System.out.println("恭喜您，中了5元小奖");
+        }else if (blueHitNumbers==1&&redHitNumbers==3||blueHitNumbers==0&&redHitNumbers==4){
+            System.out.println("恭喜您，中了10元小奖");
+        }else if (blueHitNumbers==1&&redHitNumbers==4 || blueHitNumbers==0&&redHitNumbers==5){
+            System.out.println("恭喜您，中了200元");
+        }else if(blueHitNumbers==1&&redHitNumbers==5){
+            System.out.println("恭喜您，中了3000元大奖");
+        } else if (blueHitNumbers==0&&redHitNumbers==6) {
+            System.out.println("恭喜您，中了500万超级大奖");
+        } else if (blueHitNumbers==1&&redHitNumbers==6) {
+            System.out.println("恭喜您，中了1000万巨奖");
+        }
+
+    }
+
     public static void printarray(int[] array){
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
