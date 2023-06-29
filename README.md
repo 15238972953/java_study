@@ -1,5 +1,5 @@
-# java练习小项目
-源码地址：./src/<br>
+# java practice project
+Source address：./src/<br>
 1. ATM_System<br>
 2. base_case:<br>
    (1). Buy_plane_ticket<br>
